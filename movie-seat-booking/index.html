@@ -10,12 +10,7 @@
   <body>
     <div class="movie-container">
       <label>Pick a movie:</label>
-      <select id="movie">
-        <option value="10">Avengers: Endgame ($10)</option>
-        <option value="12">Joker ($12)</option>
-        <option value="8">Toy Story 4 ($8)</option>
-        <option value="9">The Lion King ($9)</option>
-      </select>
+      <select id="movie"></select>
     </div>
 
     <ul class="showcase">
@@ -98,12 +93,23 @@
       </div>
     </div>
 
-    <p class="text">
+    <p class="text" id="purchaseInfo">
       You have selected <span id="count">0</span> seats for a price of $<span
         id="total"
         >0</span
       >
     </p>
+    <button id="purchaseBtn">Purchase</button>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <h2>Order Summary</h2>
+        <div id="ticketsInfo"></div>
+        <p id="totalPrice"></p>
+        <button id="confirmButton">Confirm Purchase</button>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
